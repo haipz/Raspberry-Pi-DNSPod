@@ -82,7 +82,7 @@ class DNSPod(object):
             logger().error("Update DDNS Error: %s", e)
             return False
 
-class App(object):
+class APP(object):
     def __init__(self):
         conf = yaml.load(open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "conf.yaml"), "r"))
         self.login_token = conf["login_token"]
@@ -110,5 +110,5 @@ class App(object):
             return None
 
 if __name__ == '__main__':
-    app = App()
+    app = APP()
     app.run()
